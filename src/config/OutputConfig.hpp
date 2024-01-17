@@ -1,8 +1,5 @@
-//
-// Created by folosuru on 2024/01/11.
-//
-
-#ifndef OUTPUTCONFIG_HPP
-#define OUTPUTCONFIG_HPP
-
-#endif //OUTPUTCONFIG_HPP
+#ifndef CPPTG_OUTPUTCONFIG_HPP
+#define CPPTG_OUTPUTCONFIG_HPP
+namespace cpptg {
+}
+#endif //CPPTG_OUTPUTCONFIG_HPP

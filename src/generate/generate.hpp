@@ -1,16 +1,10 @@
-//
-// Created by folosuru on 2024/01/11.
-//
-
-#ifndef GENERATE_HPP
-#define GENERATE_HPP
-
+#ifndef CPPTG_GENERATE_HPP
+#define CPPTG_GENERATE_HPP
+#include <filesystem>
 namespace cpptg {
 
-class generate {
-
-};
+void generate(const std::filesystem::path& config);
 
 } // cpptg
 
-#endif //GENERATE_HPP
+#endif //CPPTG_GENERATE_HPP

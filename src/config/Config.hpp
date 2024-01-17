@@ -1,16 +1,25 @@
-//
-// Created by folosuru on 2024/01/11.
-//
+#ifndef CPPTG_CONFIG_HPP
+#define CPPTG_CONFIG_HPP
+#include <filesystem>
+#include <vector>
 
-#ifndef CONFIG_HPP
-#define CONFIG_HPP
+#include "Path.hpp"
 
 namespace cpptg {
 
 class Config {
+public:
+    explicit Config(const std::filesystem::path&);
 
+    const std::vector<Path>& get_path() {
+        return pathes;
+    }
+
+private:
+    std::vector<Path> pathes;
+    std::filesystem::path root;
 };
 
 } // cpptg
 
-#endif //CONFIG_HPP
+#endif //CPPTG_CONFIG_HPP

@@ -1,17 +1,24 @@
 #ifndef CPPTG_PATH_HPP
 #define CPPTG_PATH_HPP
 #include <filesystem>
+#include <vector>
+#include "OutputConfig.hpp"
 #include <json.hpp>
+#include <optional>
+
 namespace cpptg {
 
-struct Path {
-    explicit Path(std::filesystem::path config, nlohmann::json json);
+class Path {
+public:
+    explicit Path(const std::filesystem::path& base_path, nlohmann::json json);
 
-    std::filesystem::path config_path;
+    [[nodiscard]]
+    std::filesystem::path output_to(const std::filesystem::path& file) const;
 
-    std::filesystem::path target_path;
+    const std::filesystem::path target_path;
+private:
+    std::optional<std::filesystem::path> output_path;
 
-    std::filesystem::path output_path;
 };
 
 } // cpptg

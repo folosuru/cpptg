@@ -1,16 +1,7 @@
-//
-// Created by folosuru on 2024/01/11.
-//
-
-#ifndef INITIAL_HPP
-#define INITIAL_HPP
-
-
-
-class initial {
-
-};
-
-
-
-#endif //INITIAL_HPP
+#ifndef CPPTG_INITIAL_HPP
+#define CPPTG_INITIAL_HPP
+#include <filesystem>
+namespace cpptg {
+void create_config(std::filesystem::path);
+}
+#endif //CPPTG_INITIAL_HPP
